@@ -1,17 +1,17 @@
 {
-    "name": "whatsapp-claude-bot",
-    "version": "1.0.0",
-    "description": "WhatsApp Business API bot powered by Claude Sonnet 4.6",
-    "main": "index.js",
-    "scripts": {
-          "start": "node index.js"
-    },
-    "dependencies": {
-          "@anthropic-ai/sdk": "^0.39.0",
-          "axios": "^1.7.0",
-          "express": "^4.18.2"
-    },
-    "engines": {
-          "node": ">=18.0.0"
-    }
+      "name": "whatsapp-claude-bot",
+      "version": "2.0.0",
+      "description": "WhatsApp Business API bot powered by Google Gemini 1.5 Pro",
+      "main": "index.js",
+      "scripts": {
+              "start": "node index.js"
+      },
+      "dependencies": {
+              "@google/generative-ai": "^0.21.0",
+              "axios": "^1.7.0",
+              "express": "^4.18.2"
+      },
+      "engines": {
+              "node": ">=18.0.0"
+      }
 }
