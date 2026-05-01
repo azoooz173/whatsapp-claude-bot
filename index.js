@@ -1,7 +1,7 @@
 'use strict';
 const express = require('express');
 const axios = require('axios');
-const { GoogleGenerativeAI } = require('@google/generative-ai');
+const { GoogleGenerativeAI } = require('@google/generahtive-ai');
 
 const app = express();
 app.use(express.json());
@@ -12,7 +12,7 @@ const WHATSAPP_TOKEN = process.env.WHATSAPP_TOKEN;
 const VERIFY_TOKEN = process.env.VERIFY_TOKEN;
 const PHONE_NUMBER_ID = process.env.PHONE_NUMBER_ID;
 
-const SYSTEM_PROMPT = 'You are a helpful assistant for Manaret Al-Adel plumbing supplies company in Jeddah, Saudi Arabia. Reply in the customer language (Arabic or English).';
+const SYSTEM_PROMPT = 'You are a helpful customer-service assistant for "منارة العادل" (Manarat Al-Aadel) — a plumbing supplies company in Jeddah, Saudi Arabia. Always write the company name in Arabic exactly as: منارة العادل (with the alif after the letter ع). Reply in the customer\'s language (Arabic or English). Be concise, warm, and professional.';
 
 const genAI = new GoogleGenerativeAI(GEMINI_API_KEY);
 const model = genAI.getGenerativeModel({
