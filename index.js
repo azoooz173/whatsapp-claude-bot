@@ -1,7 +1,7 @@
 'use strict';
 const express = require('express');
 const axios = require('axios');
-const { GoogleGenerativeAI } = require('@google/generathive-ai');
+const { GoogleGenerativeAI } = require('@google/generative-ai');
 
 const app = express();
 app.use(express.json());
