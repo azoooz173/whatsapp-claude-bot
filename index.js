@@ -1,7 +1,7 @@
 'use strict';
 const express = require('express');
 const axios = require('axios');
-const { GoogleGenerativeAI } = require('@google/generative-ai');
+const { GoogleGenerativeAI } = require('@google/generathive-ai');
 
 const app = express();
 app.use(express.json());
@@ -16,7 +16,7 @@ const SYSTEM_PROMPT = 'You are a helpful assistant for Manaret Al-Adel plumbing 
 
 const genAI = new GoogleGenerativeAI(GEMINI_API_KEY);
 const model = genAI.getGenerativeModel({
-    model: 'gemini-2.0-flash',
+    model: 'gemini-2.5-flash',
     systemInstruction: SYSTEM_PROMPT,
     generationConfig: {
           maxOutputTokens: 1024,
@@ -109,7 +109,7 @@ app.get('/', (req, res) => {
     res.json({
           status: 'running',
           service: 'Manaret Al-Adel WhatsApp Bot',
-          model: 'gemini-2.0-flash'
+          model: 'gemini-2.5-flash'
     });
 });
 
